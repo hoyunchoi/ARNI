@@ -58,32 +58,31 @@ This model generates synthetic dynamics data under given weighted adjacency matr
 Use scipy package for integration.
 
 * Kuramoto1: Plain kuramoto model
-    $\dot{x}_i = \omega_i + \sum_j J_{ij} \sin(x_j-x_i)$
+    <img src="https://latex.codecogs.com/gif.latex? \dot{x}_i = \omega_i + \sum_j J_{ij} \sin(x_j-x_i)" />
 * Kuramoto2: Kuramoto model with phase coupling
-    $\dot{x}_i = \omega_i + \sum_j J_{ij} \left[\sin(x_j-x_i) - 1.05 + 0.33 \sin(2(x_j-x_i))\right]$
+    <img src="https://latex.codecogs.com/gif.latex? \dot{x}_i = \omega_i + \sum_j J_{ij} \left[\sin(x_j-x_i) - 1.05 + 0.33 \sin(2(x_j-x_i))\right]" />
 * Michaelis_Menten: Michaelis-Menten kinetics used in gene regulation
-    $\dot{x}_i = -x_i + \sum_j J_{ij} \frac{x_j}{1+x_j}$
+    <img src="https://latex.codecogs.com/gif.latex? \dot{x}_i = -x_i + \sum_j J_{ij} \frac{x_j}{1+x_j}" />
 * Ressler: Coupled Rösler oscillator in chaotic regime
-    $\dot{x}_i = -y_i-z_i + \sum_j J_{ij} sin(x_j)$
-    $\dot{y}_i = x_i + 0.1y_i$
-    $\dot{z}_i = 0.1 + z_i(x_i-18.0)$
-
+    <img src="https://latex.codecogs.com/gif.latex? \dot{x}_i = -y_i-z_i + \sum_j J_{ij} sin(x_j)" />
+    <img src="https://latex.codecogs.com/gif.latex? \dot{y}_i = x_i + 0.1y_i" />
+    <img src="https://latex.codecogs.com/gif.latex? \dot{z}_i = 0.1 + z_i(x_i-18.0)" />
 
 ### Basis.py
 This module contains list of basis for pairwise interaction. Expands the dynamics of target node $i$ with chosen basis with chosen maximum order.
 
 * Polynomial: Plain polynomial basis
-    $h^i_{j,p}=x_j^p$
+    <img src="https://latex.codecogs.com/gif.latex? h^i_{j,p}=x_j^p" />
 * PolynomialDiff: Polynomial basis with argument of difference
-    $h^i_{j,p}=(x_j-x_i)^p$
+    <img src="https://latex.codecogs.com/gif.latex? h^i_{j,p}=(x_j-x_i)^p" />
 * Fourier: Plain fourier basis
-    $h^{i, (1)}_{j,p} = \sin(px_j), h^{i, (2)}_{j,p} = \cos(px_j)$
+    <img src="https://latex.codecogs.com/gif.latex? h^{i, (1)}_{j,p} = \sin(px_j), h^{i, (2)}_{j,p} = \cos(px_j)" />
 * FourierDiff: Fourier basis with argument of difference
-    $h^{i, (1)}_{j,p} = \sin(p(x_j-x_i)),  h^{i, (2)}_{j,p} = \cos(p(x_j-x_i))$
+    <img src="https://latex.codecogs.com/gif.latex? h^{i, (1)}_{j,p} = \sin(p(x_j-x_i)),  h^{i, (2)}_{j,p} = \cos(p(x_j-x_i))" />
 * Power: Plain power basis
-    $h^i_{j,p_1,p_2} = x_i^{p_1}x_j^{p_2}$
+    <img src="https://latex.codecogs.com/gif.latex? h^i_{j,p_1,p_2} = x_i^{p_1}x_j^{p_2}" />
 * RBF: Radial Basis Function
-    $h^i_{j,p} = 1+\Vert (x_i,x_j) - (x_{i,p}, x_{j,p}) \Vert^2$
+    <img src="https://latex.codecogs.com/gif.latex? h^i_{j,p} = 1+\Vert (x_i,x_j) - (x_{i,p}, x_{j,p}) \Vert^2" />
 
 ### Reconstruction.py
 This module returns the confidence level of neighbor of target node estimated from raw simulation data.

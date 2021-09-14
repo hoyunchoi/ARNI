@@ -7,8 +7,7 @@ class Reconstruction:
             rawData: data points of multi-variative time series
             nodeIdx: target node to be reconstructed
         """
-        self.rawData = rawData.reshape(50, 10, 25)
-        # self.rawData = rawData
+        self.rawData = rawData
         self.ensemble, self.length, self.numVariable = self.rawData.shape
         self.numData = self.ensemble * (self.length -1)
         self.nodeIdx = nodeIdx

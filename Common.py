@@ -10,10 +10,10 @@ class NetworkList(Enum):
 
 class ModelList(Enum):
     """List of available models"""
-    kuramoto1 = Kuramoto1, 'kuramoto1'
-    kuramoto2 = Kuramoto2, 'kuramoto2'
-    michaelis_menten = Michaelis_Menten, 'michelis_menten'
-    roessler = Roessler, 'roessler'
+    kuramoto1 = Kuramoto1
+    kuramoto2 = Kuramoto2
+    michaelis_menten = Michaelis_Menten
+    roessler = Roessler
 
 class BasisList(Enum):
     """Available basis"""
